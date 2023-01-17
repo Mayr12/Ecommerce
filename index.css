@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,400;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #818039e0;
+  height: 50px;
+  display: flex;
+}
+
+
+.logo {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  margin: 15px;
+  padding-left: 50px;
+}
+
+.options {
+  width: 50%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding-right: 50px;
+  font-size: 1.2vw;
+}
+.options li {
+  display: inline-block;
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  font-family: "Hanken Grotesk", sans-serif;
+  height: 100%;
+  align-items: center;
+  color: rgb(246, 255, 243);
+}
+
+.options li:hover{
+  cursor: pointer;
+  background: #cff3be;
+  font-weight: bold;
+  color: #636d4c;
+}
+
+
+
+
+
+/*Header*/
+
+.header {
+  height: 800px;
+  background-color: #cff3be;
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.imagenLogo {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.imagenLogo img {
+  width: 50%;
+  height: 50%;
+}
+
+.banner {
+  width: 50%;
+  animation: banner 20s infinite linear;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+}
+
+@keyframes banner {
+  0%,
+  20% {
+    background-image: url(./image/Banner/banner1.jpg);
+  }
+  20%,
+  50% {
+    background-image: url(./image/Banner/banner2.jpg);
+  }
+  50%,
+  70% {
+    background-image: url(./image/Banner/banner3.jpg);
+  }
+  70%,
+  100% {
+    background-image: url(./image/Banner/banner4.jpg);
+  }
+}
+
+
+.cap {
+  width: 624.5px;
+  height: 700px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+}
+
+.content{
+  color: white;
+  z-index: 1; 
+  padding-left: 50px; 
+  display: flex;
+  flex-direction: column;
+  font-family:  Arial, Helvetica, sans-serif;
+  
+}
+
+.content h1{
+  font-size: 30px;
+}
+
+.buttonShowProducts{
+  padding-top: 20px;
+}
+
+.snap-butProducts{
+  scroll-snap-align: start;
+  min-height: 60vh
+}
+
+.butProducts{
+  font-size:20px;
+  font-family:Verdana,Helvetica;
+  font-weight:bold;
+  color:white;
+  background:#c4b317;
+  padding: 10px;
+  border-radius: 25px;
+  border-color: rgb(196, 171, 34);
+  box-shadow: 6px 5px 24px #636d4c;
+}
+
+.butProducts:hover{
+  cursor: pointer;
+  box-shadow: 6px 5px 24px #b2c48a
+}
+
+  /*Hide Menu responsive*/
+
+.hideMenu{
+  width: 20px;
+  padding-top: 50%
+}
+
+
+.options .menu {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .options li:not(:last-child) {display: none;}
+  .options li.menu {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .options.responsive {position: relative;}
+  .options.responsive .menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .options.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+}
+
+
+/*Button hide*/
+.buttonHide{
+  position: absolute;
+  top: 100%;
+  display: none;
+}
+
+.secondButtonResponsive{
+  border-radius:10px;
+  outline:none;
+  cursor: pointer;
+  padding: 3px;
+  border: #818039e0 ;
+  font-family:Verdana,Helvetica;
+}
+
+.snap-secondButtonResponsive{
+  scroll-snap-align: start;
+  min-height: 60vh
+}
+
+@media screen and (max-width: 600px) {
+  .banner{
+    display:none;
+  }
+
+  .header{
+    height: 200px;
+    }
+
+
+  .positionLogo{
+    min-width: 110px;
+    min-height: 110px;
+    max-width: 110px;
+    max-height: 110px;
+  }
+
+  .imagenLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .buttonHide{
+    position: relative;
+    top: 10px;
+    display: unset;
+  }
+}
+
+
+
+
+/*Sections Products*/
+.men{
+  background-color: rgb(238, 252, 223);
+  padding-bottom: 25px ;
+}
+.typeSection {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.typeSectionMen {
+  display: block;
+  text-align: center;
+  padding-top: 50px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.cart {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(100px, auto);
+  column-gap: 10em;
+  row-gap: 2em;
+  padding: 35px 150px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cart div {
+  background-color: #b16e3a;
+  color: white;
+  border-radius: 10px;
+}
+
+.cartImg {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  border-radius: 8px 8px 0px 0px;
+}
+.cartImg img {
+  width: 100%;
+  display: block;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.titleProduct{
+    display: flex;
+    justify-content: center;
+}
+
+.productDescription{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.price{
+    display: flex;
+    align-items: center;
+}
+
+.buyProductButton{
+  width: 55px;
+}
+
+/*section product responsive*/
+
+@media screen and (max-width: 600px) {
+  .cart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: minmax(100px, auto);
+    column-gap: 3em;
+    row-gap: 3em;
+    padding: 35px 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  }
+
+  .woman{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .men{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*lista de productos*/
+
+.shop{
+  position: relative;
+}
+
+.list{
+  position:absolute;
+  top: -300rem;
+  width: 300px;
+  right: 0px;
+  height: auto;
+  background-color:#818039e0;
+  transition: .5s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 0 0 15px 15px;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.shop:hover .list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+  top: 50px;
+  transition: .5s ease-in-out;
+  z-index: 2;
+}
+
+.listItem{
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.titleItem{
+  text-shadow: 3px 2px 1px #868f86;
+}
+
+.textDescription{
+  color: #0d0e0d;
+}
+
+.imgProduct{
+  width: 60px;
+}
+
+.imgtrash{
+  width: 20px;
+  padding-top: 20px;
+}
+
+.buyProductButton:hover{
+  cursor: pointer;
+  
+}
+
+.listBuy{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 20rem;
+  overflow-y: scroll;
+
+}
+.Button {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+.btn{
+  background-color: #c4b317;
+  padding: 10px;
+  width: 70%;
+  border-radius: 20px;
+  box-shadow: 9px 4px 24px#5f645f;
+  
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+}
+
+.btn:hover{
+  cursor: pointer;
+  box-shadow: 6px 3px 50px #b2c48a 
+}
+
+/*Modal*/
+.imgModal{
+  width: 10rem;
+  height: 100%;
+  padding-left: 10px;
+}
+.descriptionProduct{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128,128,128,0.5);
+  z-index: 1;
+}
+
+.modalDescription{
+  background-color: #6a8667;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 15rem;
+  width: 25rem;
+  transition: all .5s;
+  z-index: 1;
+}
+
+.textModal{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.cartModal{
+  padding-top: 20px;
+}
+
+.buttonClosed{
+  color: rgb(13, 13, 19);
+  position: absolute;
+  top: 0px;
+  right: 5px;
+
+  font-family: fantasy;
+  font-size: 22px;
+
+  text-shadow: 1px 1px 5px rgb(36, 36, 39);
+
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+
+  .modalDescription {
+    background-color: #6a8667;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 15rem;
+    width: 18rem;
+    transition: all .5s;
+    z-index: 1;
+  }
+}
+
+
+
+
+
+/*Footer*/
+.footer{
+  height: 50px  ;
+  background-color: #818039e0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.imgEnd{
+  height: 30px;
+}
+
+
+
+
+
+

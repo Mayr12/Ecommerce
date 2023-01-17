@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./image/Icon/ATTYIO.png" />
+      </div>
+      <ul class="options" id="optionsMenu">
+
+        <li>Hombre</li>
+        <li>Mujer</li>
+        <li class="shop">Carrito
+
+          <div class="list">
+            <div class="listBuy">
+              <div class="listToBuy" id="container"></div>
+            </div>
+            <div class="Button">
+              <a href="./templates/ThankYouPage.html" class="btn">Comprar</a>
+            </div>
+          </div>
+        </li>
+        <li class="menu" id="functionMenu">
+          <img src="./image/Icon/three.png" class="hideMenu"></img>
+        </li>
+
+      </ul>
+    </nav>
+
+    <header class="header">
+      <div class="imagenLogo">
+        <img src="./image/Icon/AYheader1.png" class="positionLogo" />
+        <div class="buttonHide">
+          <button class="secondButtonResponsive" id="secondScrollFunction">Ver Productos</button>
+        </div>
+      </div>
+
+      <div class="banner">
+        <div class="cap"></div>
+
+        <div class="content">
+          <h1>Descubre lo que tenemos para ti</h1>
+          <p>Somos tu mejor opción</p>
+        
+          <div class="buttonShowProducts">
+            <button class="butProducts" id="scrollFunction">Ver Productos</button>
+          </div>
+        </div>
+    </header>
+
+    <main class="main">
+      <section class="woman">
+
+        <article class="typeSection" id="sectionScrollWoman">
+          <p>Productos para</p>
+          <h2>Mujer</h2>
+        </article>
+
+        <article class="cart" id="containerOne">
+          </article>
+      </section>
+
+      <section class="men">
+        <article class="typeSectionMen">
+          <p>Productos para</p>
+          <h2>Hombre</h2>
+        </article>
+
+        <article class="cart" id="containerTwo">
+        </article>
+      </section>
+
+      <section class="modalContent" id="modal">
+      </section>
+      
+    </main>
+    
+    <footer class="footer">
+      <div><img src="./image/Icon/ATTYIO.png" class="imgEnd" /></div>
+    </footer>
+    
+    <script type="module" src="./src/index.js">
+    </script>
+
+  </body>
+</html>
